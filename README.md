@@ -1,4 +1,4 @@
-# Website analyzer
+# Website analyzer. Current version, v1.0.0
  Automatic tool for analyzing a set of website. The tool takes as input a .txt file with websites. The tool assesses these parameters on a given set of websites:
  - If HTTPS exist. If a website, for any reason, do not enforce HTTPS, it will be excluded from further testing.
  - If redirection from HTTP to HTTPS exists
@@ -8,12 +8,15 @@
  - If the websites pick a secure cipher suite from the client. They are ranked: insecure, weak, secure, recommended.
  - If the websites will pick a cipher suite containing SHA-1 (deprecated hash functin) or CBC (Lucky13 vulnerability)
  - If the websites implement a "security.txt". If so, checks the basic correctness of the implementation.
- - ....
+## Acceptable usage
+Not to be used for malicious purposes.
 ## Known bugs/problems
 - Sometimes in the exported graphs, it does not show percentages on the bars.
+- Maximum number of websites is 200.
 ## Instructions
 ### Preliminaries
-Install the dependencies
+Use Python 3.9.13.
+Install the dependencies:
 ```
 pip3 install -r requirements.txt
 ```
